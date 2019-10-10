@@ -9,6 +9,7 @@
 **Validacion**:
  Debe de ser capaz de almacenar todos los datos del paciente de forma correcta .
 
+## Buscar Paciente
 
 **ID**:02 BuscarUsuario
 
@@ -23,8 +24,8 @@
 -Se debe mostrar todos los datos el usuario.
 
 -Se debe mostrar las posibles operaciones sobre el usuario.
-############################################################################################################################################
 
+## Modificar Datos del Paciente
 **ID**:03 ModificarDatosUsuario
 
 **Descripción**: Modificar datos del usuario.
@@ -39,6 +40,12 @@ historial médico.
 ## Historial Medico
 
 **ID**:04 BuscarMostrar
+
+**Descripcion**:Buscar y mostrar en pantalla el historial médico del paciente.
+
+**Responsable**:
+
+
 
 
 
