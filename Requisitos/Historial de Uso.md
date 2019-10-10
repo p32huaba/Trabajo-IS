@@ -6,7 +6,8 @@
 
 **Responsable**: 
 
-**Validacion**:Debe de ser capaz de almacenar todos los datos del paciente de forma correcta .
+**Validacion**:
+ Debe de ser capaz de almacenar todos los datos del paciente de forma correcta .
 
 
 ## Búsqueda de datos por nombre y apellido del paciente
