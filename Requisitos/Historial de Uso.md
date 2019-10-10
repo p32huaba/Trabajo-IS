@@ -2,9 +2,11 @@
 
 **ID**: 01 DatosPersonales
 
-**Descripción**: Se dirige a la entrada de datos del paciente como nombre, apellidos, fecha nacimiento, telefono, direccion, etc.
+**Descripción**: Se dirige a la entrada de datos del paciente como nombre, apellidos, fecha nacimiento, teléfono, dirección, etc.
 
-**Responsable**:  
+**Responsable**: 
+
+**Validacion**:Debe de ser capaz de almacenar todos los datos del paciente de forma correcta .
 
 
 ## Búsqueda de datos por nombre y apellido del paciente
@@ -30,7 +32,8 @@
 
 **Descripción**: Modificar datos del usuario.
 
-**Validación**:
+**Responsabe**:
 
--Debe ser capaz de modificar todos los datos del usuario tanto como datos personañes,modificacion o cancelacion de citas e 
+**Validación**:
+ Debe ser capaz de modificar todos los datos del usuario tanto como datos personañes,modificacion o cancelacion de citas e 
 historial médico.
