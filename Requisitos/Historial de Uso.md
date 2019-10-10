@@ -1,6 +1,6 @@
 ##  Datos del Paciente 
 
-**ID**: 01 DatosPersonales
+**ID**: 01 Datos_Personales
 
 **Descripción**: Se dirige a la entrada de datos del paciente como nombre, apellidos, fecha nacimiento, teléfono, dirección, etc.
 
@@ -11,7 +11,7 @@
 
 ## Buscar Paciente
 
-**ID**:02 BuscarUsuario
+**ID**:02 Buscar_Usuario
 
 **Descripción**: Se introduce el nombre y apellidos del usuario que se busca y el sistema lo muestra con sus datos.
 
@@ -26,7 +26,7 @@
 -Se debe mostrar las posibles operaciones sobre el usuario.
 
 ## Modificar Datos del Paciente
-**ID**:03 ModificarDatosUsuario
+**ID**:03 Modificar_Datos_Usuario
 
 **Descripción**: Modificar datos del usuario.
 
@@ -37,13 +37,48 @@
 historial médico.
 
 
-## Historial Medico
+## Historial Medico del paciente
 
-**ID**:04 BuscarMostrar
+**ID**:04 Buscar_Mostrar
 
 **Descripcion**:Buscar y mostrar en pantalla el historial médico del paciente.
 
 **Responsable**:
+
+**Validación**:**ID**
+
+
+## Modificar Historial Médico 
+
+**ID**:05 Añadir_ModificarDatos
+
+**Descripcion**: Debe ser capaz de añadir y modificar el historial médico del paciente.
+
+**Responsable**:
+
+**Validación**:
+
+
+## Citas del paciente
+
+**ID**:06 Lista_Citas
+
+**Descripcion**: Almacena todas las citas de cada uno de los pacientes.
+
+**Responsable**:
+
+**Validación**:
+
+
+## Modificar la Lista de Citas del paciente
+
+**ID**>07 Modicar_Citas
+
+**Descripción**:Permite modificar las citas de los pacientes.
+
+**Responsable**:
+
+**Validación**:
 
 
 
