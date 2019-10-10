@@ -50,9 +50,9 @@ historial médico.
 
 ## Modificar Historial Médico 
 
-**ID**:05 Añadir_ModificarDatos
+**ID**:05 Modificar_Historial
 
-**Descripcion**: Debe ser capaz de añadir y modificar el historial médico del paciente.
+**Descripcion**: Debe ser capaz de modificar el historial médico del paciente, tamto añadir como eliminar datos.
 
 **Responsable**:
 
