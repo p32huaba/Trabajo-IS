@@ -1,7 +1,11 @@
 ##  Datos del Paciente 
+
 **ID**: 01 DatosPersonales
+
 **Descripción**: Se dirige a la entrada de datos del paciente como nombre, apellidos, fecha nacimiento, teléfono, dirección, etc.
+
 **Responsable**: 
+
 **Validacion**:
  Debe de ser capaz de almacenar todos los datos del paciente de forma correcta .
 
@@ -19,7 +23,7 @@
 -Se debe mostrar todos los datos el usuario.
 
 -Se debe mostrar las posibles operaciones sobre el usuario.
-
+############################################################################################################################################
 
 **ID**:03 ModificarDatosUsuario
 
