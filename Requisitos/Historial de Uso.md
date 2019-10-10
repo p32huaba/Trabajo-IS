@@ -8,7 +8,7 @@
 
 **Validacion**:
  Debe de ser capaz de almacenar todos los datos del paciente de forma correcta .
---------------------------------------------------------------------------------------------------------------------------------------------
+
 
 **ID**:02 BuscarUsuario
 
@@ -23,7 +23,7 @@
 -Se debe mostrar todos los datos el usuario.
 
 -Se debe mostrar las posibles operaciones sobre el usuario.
------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 **ID**:03 ModificarDatosUsuario
 
@@ -34,6 +34,12 @@
 **Validación**:
  Debe ser capaz de modificar todos los datos del usuario tanto como datos personañes,modificacion o cancelacion de citas e 
 historial médico.
+
+
+## Historial Medico
+
+**ID**:04 BuscarMostrar
+
 
 
 
