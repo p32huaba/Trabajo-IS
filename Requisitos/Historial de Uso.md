@@ -16,8 +16,7 @@
 **Responsable**: 
 
 **Validacion**:
+
 -Se debe poder buscar cualquier usuario.
-
 -Se debe mostrar todos los datos el usuario.
-
 -Se debe mostrar las posibles operaciones sobre el usuario.
