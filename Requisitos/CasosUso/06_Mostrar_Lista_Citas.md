@@ -1,6 +1,6 @@
 ## Mostrar la lista de citas
 
-**ID**:02
+**ID**:06
 **Descripción**: Se desea mostrar la lista de las citas.
 
 **Actores principales**: Doctores
