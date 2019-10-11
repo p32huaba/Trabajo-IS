@@ -1,6 +1,6 @@
 ## Modificar datos del historial
 
-**ID**:02
+**ID**:05
 **Descripción**: Se modifica el historial medico, añadiendo o cambiando lo ya existente.
 
 **Actores principales**: Doctores
