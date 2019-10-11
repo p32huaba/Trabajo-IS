@@ -1,6 +1,6 @@
 ## Buscar y mostrar el historial medico de un paciente
 
-**ID**:01
+**ID**:04
 **Descripción**: Se introduce el nombre y apellidos del paciente que se busca y el sistema muestra el historial medico.
 
 **Actores principales**: Doctores
