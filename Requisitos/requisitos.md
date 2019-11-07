@@ -10,31 +10,43 @@ Aquí vamos a analizar los requisitos necesarios para la creación de la Base de
 - Secretaría
 
 #### Datos que gestiona el sistema
+
 + Paciente
     + Nombre
     + Apellidos
+    + Sexo
     + Edad
     + Dirección
     + Teléfono
-    + DNI
-    + Número de la Seguridad Social
     + Historial Médico
+        + Antecedentes familiares
+        + Alergias
+    + Historial de tratamientos
+        + Medicamento
+        + Dosis
+        + Duración
+
 + Citas
-  + Hora
-  + Consulta
-  + Paciente
+    + Hora
+    + Consulta
+    + Paciente
 
 ##### Requisitos funcionales (ordenados por prioridad)
+
 1. Añadir nuevo paciente.
-2. Añadir datos del paciente.
-3. Mostrar una lista con todos los pacientes.
-4. Buscar paciente por nombre y apellidos.
-5. Mostrar datos del paciente.
-6. Mostrar historial médico del paciente.
-7. Modificar datos del paciente.
-8. Modificar historial médico del paciente.
-9. Mostrar una lista con las citas médicas concertadas.
+2. Mostrar una lista con todos los pacientes.
+3. Buscar paciente por nombre y apellidos.
+4. Mostrar datos del paciente.
+5. Mostrar historial médico del paciente.
+6. Modificar datos del paciente.
+7. Añadir nueva entrada al historial médico del paciente.
+8. Mostrar una lista con las citas médicas concertadas en el día en concreto.
+9. Mostrar una lista con las citas médicas concertadas por un paciente en concreto.
 10. Modificar las citas médicas de la lista
+11. Mostrar el historial de tratamientos
+12. Añadir nuevo tratamiento al historial de tratamientos del paciente.
+13. Cancelar el tratamiento que tenga activo un paciente.
+11. Eliminar los datos de un paciente.
 
 ##### Requisitos no funcionales
 + Sistema Operativo: Linux
