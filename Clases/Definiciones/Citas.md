@@ -4,7 +4,8 @@ Esta clase contendrá las funciones que gestionen las citas solicitadas. Entre e
 - Hora (cadena de caracteres): Indica el horario de la cita en cuestión.
 - Fecha (cadena de caracteres): Indica la fecha de la cita en cuestión.
 - Consulta (cadena de caracteres): Indica el nombre de la consulta exacta a la cual tiene que ir el paciente.
-- Paciente (cadena de caracteres): Toma herencia de la clase Paciente.
+- Nombre (cadena de caracteres): Toma herencia de la clase Paciente.
+- Apellidos (cadena de caracteres): Toma herencia de la clase Paciente
 - Médico (cadena de caracteres): Indica los datos del médico que atenderá al Paciente.
 ##### Métodos:
 - Cita: Construye la clase. Permite inicializar todos los parámetros imprescindibles para el uso de la clase.
