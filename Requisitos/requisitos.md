@@ -18,13 +18,15 @@ Aquí vamos a analizar los requisitos necesarios para la creación de la Base de
     + Edad
     + Dirección
     + Teléfono
-    + Historial Médico
-        + Antecedentes familiares
-        + Alergias
-    + Historial de tratamientos
-        + Medicamento
-        + Dosis
-        + Duración
+    
++ Historial Médico
+    + Antecedentes familiares
+    + Alergias
+    
++ Historial de tratamientos
+    + Medicamento
+    + Dosis
+    + Duración
 
 + Citas
     + Hora
