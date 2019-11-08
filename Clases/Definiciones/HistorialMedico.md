@@ -11,4 +11,4 @@ Esta clase contará con la información necesaria para gestionar el historial m�
 - Añadir_alergia: Esta función nos permite añadir una nueva alergia que pueda sufrir el paciente.
 - Modificar_alergia: Esta función nos permite modificar una alergia que hayamos introducido anteriormente.
 - Borrar_alergia: Esta función nos permite eliminar una alergía que sufriera el paciente.
-- Mostrar_historial: Esta función nos permite mostrar todos los datos introducidos dentro del Historial Médico del paciente.
+- Mostrar_historialmed: Esta función nos permite mostrar todos los datos introducidos dentro del Historial Médico del paciente.
