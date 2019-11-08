@@ -1,8 +1,8 @@
 #### Clase: Citas
 Esta clase contendrá las funciones que gestionen las citas solicitadas. Entre ellas se encontrará, por ejemplo, la de mostrar las citas de un día en concreto o la de un paciente.
 ##### Datos:
-- Hora (número): Indica el horario de la cita en cuestión.
-- Fecha (número): Indica la fecha de la cita en cuestión.
+- Hora (cadena de caracteres): Indica el horario de la cita en cuestión.
+- Fecha (cadena de caracteres): Indica la fecha de la cita en cuestión.
 - Consulta (cadena de caracteres): Indica el nombre de la consulta exacta a la cual tiene que ir el paciente.
 - Paciente (cadena de caracteres): Toma herencia de la clase Paciente.
 - Médico (cadena de caracteres): Indica los datos del médico que atenderá al Paciente.
