@@ -30,6 +30,7 @@ Aquí vamos a analizar los requisitos necesarios para la creación de la Base de
     + Hora
     + Consulta
     + Paciente
+    + Médico
 
 ##### Requisitos funcionales (ordenados por prioridad)
 
