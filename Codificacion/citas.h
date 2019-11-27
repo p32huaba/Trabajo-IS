@@ -10,7 +10,7 @@ class citas
 		string hora;
 		string consulta;
 		string medico;
-		int fecha;
+		string fecha;
 		
 	public:
 		paciente();
