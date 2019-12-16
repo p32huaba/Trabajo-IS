@@ -7,6 +7,7 @@
 
 using namespace std;
 
+//Estructura para registrar un paciente y sus datos.
 struct paciente
 {
 	char nombre[50];
@@ -17,12 +18,14 @@ struct paciente
 };
 
 void pausa();
-//void crear();
-void introducirPaciente();
-void listado();
-void consulta();
-void modificar();
 
+//Funciones para crear, leer y modificar pacientes.
+void introducirPaciente();
+void listadoPacientes();
+void consultaPaciente();
+void modificarPaciente();
+
+//Funciones para crear, leer y modificar tratamientos.
 
 
 
@@ -348,20 +351,29 @@ void introducirPaciente(){
 
 	if(arch.good()){
 		paciente paci;
-		cout << "Ingrese el nombre completo del paciente:";
+
+		cout << "Bienvenido a la creacion de registro para un nuevo paciente"
+		cout << "===============================================================" << endl;		
+		cout << "Ingrese el nombre y apellidos del paciente:";
 		cin >> paci.nombre;
+		cout << endl;
 
 		cout << "Ingrese la edad del paciente:";
 		cin >> paci.edad;
+		cout << endl;
 
 		cout << "Ingrese el sexo del paciente:";
 		cin >> paci.sexo;
+		cout << endl;
 
 		cout << "Ingrese la direccion del paciente:";
 		cin >> paci.direccion;
+		cout << endl;
 
 		cout << "Ingrese el telefono del paciente:";
 		cin >> paci.telefono;
+		cout << endl;		
+		cout << "=====================================================" << endl;
 
 		arch.write(reinterpret_cast<char *>(&paci), sizeof(paciente));
 	}
@@ -376,7 +388,7 @@ void introducirPaciente(){
 	pausa();
 }
 
-void listado(){
+void listadoPacientes(){
 
 	paciente paci;
 	ifstream arch("Registro.dat", ios::in | ios::binary);
@@ -385,11 +397,18 @@ void listado(){
 		arch.read(reinterpret_cast<char *>(&paci), sizeof(paciente));
 
 		while(!arch.eof()){
+			cout << "=====================================================" << endl;			
+			cout << "Paciente: ";
 			cout << paci.nombre << endl;
+			cout << "Edad: ";
 			cout << paci.edad << endl;
+			cout << "Sexo: ";
 			cout << paci.sexo << endl;
+			cout << "Direccion: ";
 			cout << paci.direccion << endl;
+			cout << "Telefono: ";
 			cout << paci.telefono << endl;
+			cout << "=====================================================" << endl;
 			arch.read(reinterpret_cast<char *>(&paci), sizeof(paciente));
 		}
 	}
@@ -404,7 +423,7 @@ void listado(){
 	pausa();
 }
 
-void consulta(){
+void consultaPaciente(){
 
 	paciente paci;
 	ifstream arch("Registro.dat", ios::in | ios::binary);
@@ -419,11 +438,18 @@ void consulta(){
 		while(!arch.eof()){
 
 			if(aux==paci.nombre){
+				cout << "=====================================================" << endl;				
+				cout << "Paciente: ";
 				cout << paci.nombre << endl;
+				cout << "Edad: ";
 				cout << paci.edad << endl;
+				cout << "Sexo: ";
 				cout << paci.sexo << endl;
+				cout << "Direccion: ";
 				cout << paci.direccion << endl;
+				cout << "Telefono: ";
 				cout << paci.telefono << endl;
+				cout << "=====================================================" << endl;				
 				existe=1;
 				break;
 			}
@@ -445,8 +471,80 @@ void consulta(){
 	pausa();
 }
 
-void modificar(){
+void modificarPaciente(){
 
 	paciente paci;
+	fstream arch("Registro.dat", ios::in | ios::out | ios::binary);
+
+	if(arch.good()){
+		cout << "Introduce el nombre y apellidos del paciente que quiere modificar: ";
+		char aux;
+		cin >> aux;
+		cout << endl;
+		int existe=0;
+		arch.read(reinterpret_cast<char *>(&paci), sizeof(paciente));
 	
+		while(!arch.eof()){
+
+			if(aux==paci.nombre){
+
+				cout << "=====================================================" << endl;
+				cout << "Paciente: ";
+				cout << paci.nombre << endl;
+				cout << "Edad: ";
+				cout << paci.edad << endl;
+				cout << "Sexo: ";
+				cout << paci.sexo << endl;
+				cout << "Direccion: ";
+				cout << paci.direccion << endl;
+				cout << "Telefono: ";
+				cout << paci.telefono << endl;
+				cout << "=====================================================" << endl;
+				cout << "Ahora introduzca los nuevos datos" << endl;
+				cout << "=====================================================" << endl;				 				
+
+				cout << "Ingrese el nombre y apellidos del paciente: ";
+				cin >> paci.nombre;
+				cout << endl;
+
+				cout << "Ingrese la edad del paciente: ";
+				cin >> paci.edad;
+				cout << endl;
+
+				cout << "Ingrese el sexo del paciente: ";
+				cin >> paci.sexo;
+				cout << endl;
+
+				cout << "Ingrese la direccion del paciente: ";
+				cin >> paci.direccion;
+				cout << endl;
+
+				cout << "Ingrese el telefono del paciente: ";
+				cin >> paci.telefono;
+				cout << endl;				
+				cout << "=====================================================" << endl;
+				
+				int pos=ftell(arch)-sizeof(paciente);
+				fseek(arch, pos, SEEK_SET);
+				arch.write(reinterpret_cast<char *>(&paci), sizeof(paciente));
+
+				existe=1;
+				break;
+			}
+			arch.read(reinterpret_cast<char *>(&paci), sizeof(paciente));
+		}
+
+		if(existe==0){
+			cout << "No existe un paciente con ese nombre" << endl;
+		}
+	}
+
+	else{
+		cout << "El Fichero del registro no esta disponible" << endl;
+		if(arch.fail()) cout << "Bit fail activo" << endl;
+		if(arch.eof())  cout << "Bit eof activo" << endl;
+		if(arch.bad())  cout << "Bit bad activo" << endl;
+	}
+	arch.close();
+	pausa();
 }
