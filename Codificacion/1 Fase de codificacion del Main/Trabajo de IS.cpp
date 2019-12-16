@@ -44,10 +44,10 @@ do
 cout<<"Hola, Bienvenidos a su clinica"<<endl;
 cout << "\n Menu de Opciones:";
 cout<<endl<<"===================="<<endl;
-cout<< "A- Paciente"<<endl;
+cout<< "A- Pacientes"<<endl;
 cout<< "B- Citas "<<endl;
-cout<< "C- Hsitorial Medico"<<endl;
-cout<< "D- Historial de tratamientos"<<endl;
+cout<< "C- Hsitoriales Medicos"<<endl;
+cout<< "D- Historiales de tratamientos"<<endl;
 cout<< "E- Salir"<<endl;
 cout<< "\nElija su opcion: ";
 
@@ -332,7 +332,7 @@ void pausa()
 
 /*
 void crear(){
-	ofstream arch("Registro.dat", ios::out | ios::binary);
+	ofstream fsalida("Registro.dat", ios::out | ios::binary);
 	if(arch==NULL){
 		exit (1);
 	}
@@ -346,25 +346,33 @@ void introducirPaciente(){
 
 	ofstream arch("Registro.dat", ios::out | ios::binary);
 
-	paciente paci;
-	cout << "Ingrese el nombre completo del paciente:";
-	cin >> paci.nombre;
+	if(arch.good()){
+		paciente paci;
+		cout << "Ingrese el nombre completo del paciente:";
+		cin >> paci.nombre;
 
-	cout << "Ingrese la edad del paciente:";
-	cin >> paci.edad;
+		cout << "Ingrese la edad del paciente:";
+		cin >> paci.edad;
 
-	cout << "Ingrese el sexo del paciente:";
-	cin >> paci.sexo;
+		cout << "Ingrese el sexo del paciente:";
+		cin >> paci.sexo;
 
-	cout << "Ingrese la direccion del paciente:";
-	cin >> paci.direccion;
+		cout << "Ingrese la direccion del paciente:";
+		cin >> paci.direccion;
 
-	cout << "Ingrese el telefono del paciente:";
-	cin >> paci.telefono;
+		cout << "Ingrese el telefono del paciente:";
+		cin >> paci.telefono;
 
-	arch.write(reinterpret_cast<char *>(&paci), sizeof(paciente));
+		arch.write(reinterpret_cast<char *>(&paci), sizeof(paciente));
+	}
+
+	else{
+		cout << "El Fichero del registro no esta disponible" << endl;
+		if(arch.fail()) cout << "Bit fail activo" << endl;
+		if(arch.eof())  cout << "Bit eof activo" << endl;
+		if(arch.bad())  cout << "Bit bad activo" << endl;
+	}	
 	arch.close();
-
 	pausa();
 }
 
@@ -372,15 +380,25 @@ void listado(){
 
 	paciente paci;
 	ifstream arch("Registro.dat", ios::in | ios::binary);
-	arch.read(reinterpret_cast<char *>(&paci), sizeof(paciente));
 
-	while(!arch.eof()){
-		cout << paci.nombre << endl;
-		cout << paci.edad << endl;
-		cout << paci.sexo << endl;
-		cout << paci.direccion << endl;
-		cout << paci.telefono << endl;
+	if(arch.good()){
 		arch.read(reinterpret_cast<char *>(&paci), sizeof(paciente));
+
+		while(!arch.eof()){
+			cout << paci.nombre << endl;
+			cout << paci.edad << endl;
+			cout << paci.sexo << endl;
+			cout << paci.direccion << endl;
+			cout << paci.telefono << endl;
+			arch.read(reinterpret_cast<char *>(&paci), sizeof(paciente));
+		}
+	}
+
+	else{
+		cout << "El Fichero del registro no esta disponible" << endl;
+		if(arch.fail()) cout << "Bit fail activo" << endl;
+		if(arch.eof())  cout << "Bit eof activo" << endl;
+		if(arch.bad())  cout << "Bit bad activo" << endl;
 	}
 	arch.close();
 	pausa();
@@ -391,28 +409,37 @@ void consulta(){
 	paciente paci;
 	ifstream arch("Registro.dat", ios::in | ios::binary);
 	
-	cout << "Introduce el nombre del paciente que quiere consultar:";
-	char aux;
-	cin >> aux;
-	int existe=0;
-	arch.read(reinterpret_cast<char *>(&paci), sizeof(paciente));
-	
-	while(!arch.eof()){
-
-		if(aux==paci.nombre){
-			cout << paci.nombre << endl;
-			cout << paci.edad << endl;
-			cout << paci.sexo << endl;
-			cout << paci.direccion << endl;
-			cout << paci.telefono << endl;
-			existe=1;
-			break;
-		}
+	if(arch.good()){
+		cout << "Introduce el nombre del paciente que quiere consultar:";
+		char aux;
+		cin >> aux;
+		int existe=0;
 		arch.read(reinterpret_cast<char *>(&paci), sizeof(paciente));
+	
+		while(!arch.eof()){
+
+			if(aux==paci.nombre){
+				cout << paci.nombre << endl;
+				cout << paci.edad << endl;
+				cout << paci.sexo << endl;
+				cout << paci.direccion << endl;
+				cout << paci.telefono << endl;
+				existe=1;
+				break;
+			}
+			arch.read(reinterpret_cast<char *>(&paci), sizeof(paciente));
+		}
+
+		if(existe==0){
+			cout << "No existe un paciente con ese nombre" << endl;
+		}
 	}
 
-	if(existe==0){
-		cout << "No existe un paciente con ese nombre" << endl;
+	else{
+		cout << "El Fichero del registro no esta disponible" << endl;
+		if(arch.fail()) cout << "Bit fail activo" << endl;
+		if(arch.eof())  cout << "Bit eof activo" << endl;
+		if(arch.bad())  cout << "Bit bad activo" << endl;
 	}
 	arch.close();
 	pausa();
