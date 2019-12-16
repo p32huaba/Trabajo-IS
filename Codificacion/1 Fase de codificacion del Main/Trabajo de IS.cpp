@@ -7,7 +7,6 @@
 
 using namespace std;
 
-//Estructura para registrar un paciente y sus datos.
 struct paciente
 {
 	char nombre[50];
@@ -26,7 +25,6 @@ void consultaPaciente();
 void modificarPaciente();
 
 //Funciones para crear, leer y modificar tratamientos.
-
 
 
 int main()
@@ -66,9 +64,9 @@ cin >> tecla;
 
 				system("cls");
           
-		  cout<<" Elija la opcion deseada: "<<endl;
+	  cout<<" Elija la opcion deseada: "<<endl;
           cout<<"============================="<<endl;
-		  cout<<"1- Añadir Paciente"<<endl;
+ 	  cout<<"1- Añadir Paciente"<<endl;
           cout<<"2- Modificar nombre"<<endl;
           cout<<"3- Modificar direccion"<<endl;
           cout<<"4- Borar direccón"<<endl;
@@ -133,8 +131,8 @@ cin >> tecla;
 				system("cls");
 
             cout<<" Elija la opcion deseada: "<<endl; 
-		    cout<<"============================="<<endl;
-			cout<<"1- Añadir cita"<<endl;
+	    cout<<"============================="<<endl;
+	    cout<<"1- Añadir cita"<<endl;
             cout<<"2- Modificar cita"<<endl;
             cout<<"3- Eliminar cita"<<endl;
             cout<<"4- Mostrar citas del dia"<<endl;
@@ -185,7 +183,7 @@ cin >> tecla;
 
              cout<<" Elija la opcion deseada: "<<endl;
              cout<<"============================="<<endl;
-			 cout<<"1- Añadir antecedente"<<endl;
+	     cout<<"1- Añadir antecedente"<<endl;
              cout<<"2- Modificar antecedente"<<endl;
              cout<<"3- Borrar antecedente"<<endl;
              cout<<"4- Añadir alergia"<<endl;
@@ -249,9 +247,9 @@ cin >> tecla;
 
 				system("cls");
 
-			cout<<" Elija la opcion deseada: ";
+	    cout<<" Elija la opcion deseada: ";
             cout<<"============================="<<endl;
-			cout<<"1- Añadir tratamiento"<<endl;
+	    cout<<"1- Añadir tratamiento"<<endl;
             cout<<"2- Modificar tratamiento"<<endl;
             cout<<"3- Eliminar tratamiento"<<endl;
             cout<<"4- Mostrar tratamiento"<<endl;
@@ -333,21 +331,9 @@ void pausa()
 
 }
 
-/*
-void crear(){
-	ofstream fsalida("Registro.dat", ios::out | ios::binary);
-	if(arch==NULL){
-		exit (1);
-	}
-	fclose(arch);
-	pausa();
-}
-*/
-
-
 void introducirPaciente(){
 
-	ofstream arch("Registro.dat", ios::out | ios::binary);
+	ofstream arch("Registro.dat", ios::out | ios::trunc | ios::binary);
 
 	if(arch.good()){
 		paciente paci;
