@@ -7,6 +7,7 @@
 
 using namespace std;
 
+//Struct para registrar los pacientes y sus datos.
 struct paciente
 {
 	char nombre[50];
