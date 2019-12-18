@@ -48,7 +48,7 @@ cout << "\n Menu de Opciones:";
 cout<<endl<<"===================="<<endl;
 cout<< "A- Pacientes"<<endl;
 cout<< "B- Citas "<<endl;
-cout<< "C- Hsitoriales Medicos"<<endl;
+cout<< "C- Historiales Medicos"<<endl;
 cout<< "D- Historiales de tratamientos"<<endl;
 cout<< "E- Salir"<<endl;
 cout<< "\nElija su opcion: ";
